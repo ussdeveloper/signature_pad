@@ -167,6 +167,16 @@ var SignaturePad = (function (document) {
     SignaturePad.prototype.isEmpty = function () {
         return this._isEmpty;
     };
+    
+    SignaturePad.prototype.setColor = function (color) {
+        return this.penColor = color;
+    };
+    
+    SignaturePad.prototype.setSize = function (size) {
+        this.minWidth = size[0];
+        this.maxWidth = size[1];
+        return size;
+    };
 
     SignaturePad.prototype._reset = function () {
         this.points = [];
