@@ -202,7 +202,8 @@ var SignaturePad = (function (document) {
     };
     
     SignaturePad.prototype.setColor = function (color) {
-        return this.penColor = color;
+        this.penColor = color || 'black';
+        return this.penColor;
     };
     
     SignaturePad.prototype.setSize = function (size) {
